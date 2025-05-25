@@ -1,0 +1,103 @@
+/* styles.css */
+
+/* Hero image styling */
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Portfolio card styling */
+.portfolio-card img {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Social media buttons */
+.social-button {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.social-button:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #a855f7);
+}
+
+.social-button.whatsapp:hover {
+  color: #25D366;
+}
+
+.social-button.facebook:hover {
+  color: #3b5998;
+}
+
+.social-button.twitter:hover {
+  color: #1DA1F2;
+}
+
+.social-button.instagram:hover {
+  color: #E1306C;
+}
+
+/* Smooth transitions for theme toggle */
+body.light-mode {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+body.light-mode .bg-gray-900 {
+  background-color: #f3f4f6;
+}
+
+body.light-mode .bg-gray-800 {
+  background-color: #e5e7eb;
+}
+
+body.light-mode .text-gray-300 {
+  color: #4b5563;
+}
+
+body.light-mode .bg-gray-700 {
+  background-color: #d1d5db;
+}
+
+body.light-mode .border-gray-600 {
+  border-color: #9ca3af;
+}
+
+body.light-mode .portfolio-card {
+  background-color: #ffffff;
+}
+
+body.light-mode .portfolio-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .social-button:hover::after {
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+}
+
+/* Ensure form inputs and images remain readable in light mode */
+body.light-mode input,
+body.light-mode textarea {
+  color: #1f2937;
+}
